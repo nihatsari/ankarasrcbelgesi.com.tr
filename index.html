@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -81,28 +82,32 @@
       </div>
       <h3>Hızlı Bilgi Alın</h3>
       <p>Uzmanlarımız en kısa sürede dönüş yapsın.</p>
-      <div class="form-group">
-        <label for="ad">Ad Soyad</label>
-        <input type="text" id="ad" placeholder="Mehmet Yılmaz">
-      </div>
-      <div class="form-group">
-        <label for="tel">Telefon</label>
-        <input type="tel" id="tel" placeholder="0 545 781 48 61">
-      </div>
-      <div class="form-group">
-        <label for="belge">Hangi Belge?</label>
-        <select id="belge">
-          <option value="">Seçiniz...</option>
-          <option>SRC 1 - Uluslararası Yolcu</option>
-          <option>SRC 2 - Yurt İçi Yolcu</option>
-          <option>SRC 3 - Uluslararası Yük</option>
-          <option>SRC 4 - Yurt İçi Yük</option>
-          <option>SRC Kurye - Moto Kurye</option>
-          <option>Psikoteknik Belgesi</option>
-          <option>Bilmiyorum, bilgi almak istiyorum</option>
-        </select>
-      </div>
-      <button class="btn-form" onclick="handleSubmit()">&#x1F4CB; Ücretsiz Bilgi Al</button>
+      <form id="contactform" action="https://docs.google.com/forms/d/e/1FAIpQLSekjvxVftomrFXprjWMA1mL7aRWfUy_Fimd2HuyEYc39vDdqw/formResponse" name="contactform" method="post">
+		<div class="form-group">
+			<label for="entry.1337056980">Ad Soyad</label>
+			<input type="text" name="entry.1337056980" id="entry.1337056980" placeholder="Mehmet Yılmaz">
+		</div>
+		  
+		<div class="form-group">
+			<label for="entry.1431902653">Telefon</label>
+			<input type="text" name="entry.1431902653" id="entry.1431902653" placeholder="0 545 781 48 61">
+		</div>
+		  
+		<div class="form-group">
+			<label for="entry.2032873811">Hangi Belge?</label>
+			<select name="entry.2032873811" id="entry.2032873811">
+			  <option value="">Seçiniz...</option>
+			  <option value="SRC 1 - Uluslararası Yolcu">SRC 1 - Uluslararası Yolcu</option>
+			  <option value="SRC 2 - Yurt İçi Yolcu">SRC 2 - Yurt İçi Yolcu</option>
+			  <option value="SRC 3 - Yurt İçi Yolcu">SRC 3 - Uluslararası Yük</option>
+			  <option value="SRC 4 - Yurt İçi Yük">SRC 4 - Yurt İçi Yük</option>
+			  <option value="SRC Kurye - Moto Kurye">SRC Kurye - Moto Kurye</option>
+			  <option value="Psikoteknik Belgesi">Psikoteknik Belgesi</option>
+			  <option value="Bilmiyorum, bilgi almak istiyorum">Bilmiyorum, bilgi almak istiyorum</option>
+			</select>
+		</div>
+		 <button type="submit" class="btn-form" onclick="handleSubmit()">&#x1F4CB; Ücretsiz Bilgi Al</button>
+	  </form>
       <p class="form-note">Eğitim danışmanlarımız sizi arayarak <em>en doğru belgeye</em> yönlendirecektir.</p>
     </div>
   </div>
@@ -487,10 +492,10 @@
     if (!isOpen) item.classList.add('open');
   }
   function handleSubmit() {
-    const ad = document.getElementById('ad').value.trim();
-    const tel = document.getElementById('tel').value.trim();
-    if (!ad || !tel) { alert('Lütfen ad ve telefon numaranızı girin.'); return; }
-    alert('Teşekkürler ' + ad + '! En kısa sürede ' + tel + ' numarasından sizi arayacağız.');
+    const entry.1337056980 = document.getElementById('entry.1337056980').value.trim();
+    const entry.199052782 = document.getElementById('entry.199052782').value.trim();
+    if (!entry.1337056980 || !entry.199052782) { alert('Lütfen ad ve telefon numaranızı girin.'); return; }
+    alert('Teşekkürler ' + entry.1337056980 + '! En kısa sürede ' + entry.199052782 + ' numarasından sizi arayacağız.');
   }
   const obs = new IntersectionObserver(entries => {
     entries.forEach(e => { if (e.isIntersecting) e.target.style.opacity = '1'; });
